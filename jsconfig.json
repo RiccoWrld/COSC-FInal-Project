@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+      "baseUrl": "src",
+      "paths": {
+        "TextAnimations": ["app.js"],
+        "@components/*": ["components/*"]
+      }
+    },
+    "include": ["src"]
+  }
+  
