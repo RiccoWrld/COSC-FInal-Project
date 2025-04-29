@@ -32,4 +32,7 @@
   .shiny-text.disabled {
     animation: none;
   }
-  
+  .chat-page.shiny-text {
+    font-size: 10px; /* Adjust this value to change font size */
+    margin-top: 0px;
+  }

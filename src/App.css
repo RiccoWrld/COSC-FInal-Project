@@ -1,8 +1,13 @@
+/* make body fill the whole screen */
+/*home page css*/
 body{
   margin:0;
   padding:0;
   height:100%;
   background-color: black;
+  display:flex;
+  justify-content: center;
+  align-items: center;
 }
 .App{
   background-color: black;
@@ -47,8 +52,10 @@ body{
   margin-top: 100px;
   text-align: center;
 }
+
+/*Login  page css8*/
 .login-container {
-  background-color: rgb(11, 36, 99);
+  background-color: rgb(17, 61, 148);
   color: white;
   padding: 40px;
   border-radius: 10px;
@@ -56,9 +63,170 @@ body{
   margin: 100px auto;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+.login-form label {
+  text-align:left;
+  margin-bottom:5px;
+  margin-top:15px;
+}
+.login-form input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 30px;
+  width: 100%;
+  background-color:#ccc;
+  font-size: 14px;
+}
+.login-form button {
+  margin-top: 0px;
+  margin-bottom:20px;
+  padding: 10px;
+  background-color: #e5eee5;
+  border:none;
+  width:100%;
+   border-radius:5px;
+  color:rgb(6, 6, 6);
+  font-weight:bold;
+  cursor:pointer;
+  font-size: 16px;
+  transition:background 0.3s;
+}
 
-h1{
+.login-form button:hover {
+  background-color: #4d504d;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 12px;
+}
+
+.form-group{
+  display:flex;
+  flex-direction:coloumn;
+  margin-bottom:20px;
+  width:100%;
+}
+
+
+.login-page{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+}
+.login-container h2{
   color: white;
   font-size: 50px;
   text-align: center;
+}
+
+/*Chat page css*/
+
+.chat-container {
+  background-color: #2f2f2f;
+  width: 700px;
+  height: 90vh;
+  border-radius: 12px;
+  border: solid 1px #444;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* push form to bottom */
+  padding: 20px;
+}
+
+.message-form {
+  display: flex;
+  width:100%;
+  padding:12px;
+  gap: 10px;
+  background-color:#2f2f2f;
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px solid #444;
+  box-sizing: border-box;
+ 
+}
+
+.message-form input {
+  flex: 1;                      /* stretches to fill available space */
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background-color: #d1d5db;
+  font-size: 16px;
+  outline: none;
+}
+.message-form button {
+  padding: 12px 20px;
+  background-color: #376dd8;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+  white-space: nowrap; /* keeps 'Send' text on one line */
+}
+.message-form button:hover {
+  background-color: #0d47e8;
+}
+
+
+/*.message-list {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-right: 10px;
+}*/
+
+.message-list {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+
+button{
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+  margin-top: 10px;
+  background-color: #e5eee5;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;  
+
+
+}
+
+.chat-bubble {
+  max-width: 60%;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 10px;
+  word-break: break-word;
+}
+
+.user {
+  background-color: #0c85db; /* Green for your own messages */
+  color: white;
+  align-self: flex-end;
+}
+
+.bot {
+  background-color: #e0e0e0; /* Gray for others */
+  color: black;
+  align-self: flex-start;
 }
